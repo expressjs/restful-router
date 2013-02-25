@@ -1,13 +1,12 @@
 {
   "name": "restful-router",
   "version": "0.0.1",
-  "description": "restful-router",
+  "description": "Simple RESTful url router.",
   "main": "index.js",
   "scripts": {
     "test": "make test"
   },
   "dependencies": {
-
   },
   "devDependencies": {
     "should": "*",
@@ -22,7 +21,7 @@
     "url": "git://github.com/fengmk2/restful-router.git"
   },
   "keywords": [
-    "restful-router"
+    "restful-router", "restful", "urlrouter", "router", "mapping", "route"
   ],
   "author": "fengmk2 <fengmk2@gmail.com>",
   "license": "MIT"
