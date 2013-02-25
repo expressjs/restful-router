@@ -20,10 +20,6 @@ var server = connect(
 
 connect.query(),
 connect.bodyParser(),
-// function (req, res, next) {
-//   console.log(req.method, req.url);
-//   next();
-// },
 urlrouter(function (app) {
 
   app.get('/', function (req, res) {

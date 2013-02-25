@@ -13,16 +13,52 @@ Simple RESTful url router.
 $ npm install restful-router
 ```
 
+## RESTful routes
+
+```js
+/**
+ * Auto generate RESTful url routes.
+ *
+ * URL routes:
+ *
+ *  GET    /users           => user.list()
+ *  GET    /users/new       => user.new()
+ *  GET    /users/:id       => user.show()
+ *  GET    /users/:id/edit  => user.edit()
+ *  POST   /users           => user.create()
+ *  PUT    /users/:id       => user.update()
+ *  DELETE /users/:id       => user.destroy()
+ *
+ * @param {Object} app, must impl `app.get(), app.post(), app.put(), app.delete()`.
+ * @param {String} name, resource's name. like `users, posts, tweets`.
+ * @param {Object} mod, module contains `CRUD List` methods.
+ */
+function restfulRouter(app, name, mod);
+```
+
 ## Usage
 
 ```js
 var restful = require('restful-router');
+var connect = require('connect');
+var urlrouter = require('urlrouter');
+var user = require('./controllers/user');
+var foo = require('./controllers/foo');
 
+var server = connect(
+  connect.query(),
+  connect.bodyParser(),
+  urlrouter(function (app) {
 
+    app.get('/', function (req, res) {
+      res.end('hello world');
+    });
 
-restful-router.foo(function (err) {
-  
-});
+    restful(app, 'users', user);
+    restful(app, 'foos', foo);
+
+  })
+).listen(3000);
 ```
 
 ## License 
