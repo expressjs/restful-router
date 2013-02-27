@@ -17,19 +17,28 @@ var user = require('./controllers/user');
 var foo = require('./controllers/foo');
 
 var server = connect(
+  connect.query(),
+  connect.bodyParser(),
+  urlrouter(function (app) {
+    app.get('/', function (req, res) {
+      res.end('hello world');
+    });
 
-connect.query(),
-connect.bodyParser(),
-urlrouter(function (app) {
+    restful({
+      app: app,
+      name: 'users',
+      controller: user
+    });
 
-  app.get('/', function (req, res) {
-    res.end('hello world');
-  });
+    restful({
+      app: app,
+      baseURL: '/users/:uid',
+      name: 'foos',
+      controller: foo
+    });
 
-  restful(app, 'users', user);
-  restful(app, 'foos', foo);
-
-}));
+  })
+);
 
 if (process.env.NODE_ENV !== 'test') {
   server.listen(3000);

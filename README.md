@@ -49,13 +49,22 @@ var server = connect(
   connect.query(),
   connect.bodyParser(),
   urlrouter(function (app) {
-
     app.get('/', function (req, res) {
       res.end('hello world');
     });
 
-    restful(app, 'users', user);
-    restful(app, 'foos', foo);
+    restful({
+      app: app,
+      name: 'users',
+      controller: user
+    });
+    
+    restful({
+      app: app,
+      baseURL: '/users/:uid/',
+      name: 'foos',
+      controller: foo
+    });
 
   })
 ).listen(3000);

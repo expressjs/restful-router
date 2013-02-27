@@ -87,15 +87,22 @@ describe('restful-router.test.js', function () {
     .expect(404, done);
   });
 
-  it('should get /foos => 500', function (done) {
+  it('should get /foos => 404', function (done) {
     request(app)
     .get('/foos')
+    .expect(404, done);
+  });
+
+  it('should get /users/mk2/foos => 500', function (done) {
+    request(app)
+    .get('/users/mk2/foos')
+    .expect(/Error: mock foo.list error, uid: mk2/)
     .expect(500, done);
   });
 
-  it('should post /foos => 404', function (done) {
+  it('should post /users/123/foos => 404', function (done) {
     request(app)
-    .post('/foos')
+    .post('/users/123/foos')
     .expect(404, done);
   });
 
