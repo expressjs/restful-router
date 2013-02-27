@@ -29,9 +29,11 @@ $ npm install restful-router
  *  PUT    /users/:id       => user.update()
  *  DELETE /users/:id       => user.destroy()
  *
- * @param {Object} app, must impl `app.get(), app.post(), app.put(), app.delete()`.
- * @param {String} name, resource's name. like `users, posts, tweets`.
- * @param {Object} mod, module contains `CRUD List` methods.
+ * @param {Object} options
+ *  - {Object} app, must impl `app.get(), app.post(), app.put(), app.delete()`.
+ *  - {String} name, resource's name. like `users, posts, tweets`.
+ *  - {Object} controller, controller module contains `CRUD List` methods.
+ *  - {String} [baseURL], default is '/'. e.g.: '/posts/:pid/'
  */
 function restfulRouter(app, name, mod);
 ```
