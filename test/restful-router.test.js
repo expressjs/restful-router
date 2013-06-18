@@ -106,4 +106,11 @@ describe('restful-router.test.js', function () {
     .expect(404, done);
   });
 
+  it('should get /users/123/foos/2013-06-18 => 200', function (done) {
+    request(app)
+    .get('/users/123/foos/2013-06-18')
+    .expect('GET /users/:uid/foos/:date => show, params: {"uid":"123","date":"2013-06-18"}')
+    .expect(200, done);
+  });
+
 });
