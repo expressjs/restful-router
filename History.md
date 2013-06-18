@@ -1,4 +1,10 @@
 
+0.1.1 / 2013-06-18 
+==================
+
+  * support custom url id name by options.key params
+  * remove 0.6 from travis
+
 0.1.0 / 2013-06-18 
 ==================
 

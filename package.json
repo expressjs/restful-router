@@ -1,6 +1,6 @@
 {
   "name": "restful-router",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple RESTful url router.",
   "main": "index.js",
   "scripts": {
