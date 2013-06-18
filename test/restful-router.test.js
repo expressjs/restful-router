@@ -54,9 +54,9 @@ describe('restful-router.test.js', function () {
 
   it('should put /users/:id => user.update', function (done) {
     request(app)
-    .put('/users/123')
+    .patch('/users/123')
     .send({ name: 'fooupdate' })
-    .expect('PUT /users/:id => update, query: {}, params: {"id":"123"}, body: {"name":"fooupdate"}')
+    .expect('PATCH /users/:id => update, query: {}, params: {"id":"123"}, body: {"name":"fooupdate"}')
     .expect(200, done);
   });
 

@@ -1,4 +1,4 @@
-restful-router [![Build Status](https://secure.travis-ci.org/fengmk2/restful-router.png)](http://travis-ci.org/fengmk2/restful-router) [![Dependencies](http://david-dm.org/fengmk2/restful-router.png)](http://david-dm.org/fengmk2/restful-router)
+restful-router [![Build Status](https://secure.travis-ci.org/fengmk2/restful-router.png)](http://travis-ci.org/fengmk2/restful-router)
 =======
 
 ![logo](https://raw.github.com/fengmk2/restful-router/master/logo.png)
@@ -26,11 +26,11 @@ $ npm install restful-router
  *  GET    /users/:id       => user.show()
  *  GET    /users/:id/edit  => user.edit()
  *  POST   /users           => user.create()
- *  PUT    /users/:id       => user.update()
+ *  PATCH  /users/:id       => user.update()
  *  DELETE /users/:id       => user.destroy()
  *
  * @param {Object} options
- *  - {Object} app, must impl `app.get(), app.post(), app.put(), app.delete()`.
+ *  - {Object} app, must impl `app.get(), app.post(), app.patch(), app.delete()`.
  *  - {String} name, resource's name. like `users, posts, tweets`.
  *  - {Object} controller, controller module contains `CRUD List` methods.
  *  - {String} [baseURL], default is '/'. e.g.: '/posts/:pid/'
