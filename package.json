@@ -4,15 +4,25 @@
   "description": "Simple RESTful url router.",
   "main": "index.js",
   "scripts": {
-    "test": "make test"
+    "test": "make test-all",
+    "blanket": { 
+      "pattern": "restful-router/lib",
+      "data-cover-flags": {
+        "debug": false
+      }
+    },
+    "travis-cov": {
+      "threshold": 100
+    }
   },
   "dependencies": {
     "debug": "0.x"
   },
   "devDependencies": {
     "should": "*",
-    "jscover": "*",
-    "urlrouter": "*",
+    "blanket": "*",
+    "travis-cov": "*",
+    "urlrouter": ">=0.4.0",
     "supertest": "*",
     "connect": "*",
     "mocha": "*"
