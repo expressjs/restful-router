@@ -1,11 +1,9 @@
-restful-router [![Build Status](https://secure.travis-ci.org/fengmk2/restful-router.png)](http://travis-ci.org/fengmk2/restful-router)
+restful-router [![Build Status](https://secure.travis-ci.org/fengmk2/restful-router.png)](http://travis-ci.org/fengmk2/restful-router) [![Coverage Status](https://coveralls.io/repos/fengmk2/restful-router/badge.png)](https://coveralls.io/r/fengmk2/restful-router)
 =======
 
 ![logo](https://raw.github.com/fengmk2/restful-router/master/logo.png)
 
 Simple RESTful url router.
-
-* jscoverage: [100%](http://fengmk2.github.com/coverage/restful-router.html)
 
 ## Install
 
