@@ -19,11 +19,11 @@ $ npm install restful-router
  *
  * URL routes:
  *
- *  GET    /users           => user.list()
+ *  GET    /users[/]        => user.list()
  *  GET    /users/new       => user.new()
  *  GET    /users/:id       => user.show()
  *  GET    /users/:id/edit  => user.edit()
- *  POST   /users           => user.create()
+ *  POST   /users[/]        => user.create()
  *  PATCH  /users/:id       => user.update()
  *  DELETE /users/:id       => user.destroy()
  *

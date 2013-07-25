@@ -10,15 +10,22 @@
  * Module dependencies.
  */
 
-var restful = require('../');
+var pedding = require('pedding');
 var should = require('should');
-var app = require('../example/app');
 var request = require('supertest');
+var restful = require('../');
+var app = require('../example/app');
 
 describe('restful-router.test.js', function () {
   it('should get /users => user.list', function (done) {
+    done = pedding(2, done);
     request(app)
     .get('/users')
+    .expect('GET /users => list, query: {}')
+    .expect(200, done);
+
+    request(app)
+    .get('/users/')
     .expect('GET /users => list, query: {}')
     .expect(200, done);
   });
@@ -45,8 +52,15 @@ describe('restful-router.test.js', function () {
   });
 
   it('should post /users => user.create', function (done) {
+    done = pedding(2, done);
     request(app)
     .post('/users')
+    .send({ name: 'foo' })
+    .expect('POST /users => create, query: {}, params: {}, body: {"name":"foo"}')
+    .expect(200, done);
+
+    request(app)
+    .post('/users/')
     .send({ name: 'foo' })
     .expect('POST /users => create, query: {}, params: {}, body: {"name":"foo"}')
     .expect(200, done);

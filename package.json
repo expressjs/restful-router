@@ -16,7 +16,7 @@
     }
   },
   "dependencies": {
-    "debug": "0.x"
+    "debug": "0.7.2"
   },
   "devDependencies": {
     "should": "*",
@@ -27,7 +27,8 @@
     "urlrouter": ">=0.4.0",
     "supertest": "*",
     "connect": "*",
-    "mocha": "*"
+    "mocha": "*",
+    "pedding": "*"
   },
   "repository": {
     "type": "git",
