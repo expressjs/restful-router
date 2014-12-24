@@ -1,4 +1,4 @@
-restful-router [![Build Status](https://secure.travis-ci.org/fengmk2/restful-router.png)](http://travis-ci.org/fengmk2/restful-router) [![Coverage Status](https://coveralls.io/repos/fengmk2/restful-router/badge.png)](https://coveralls.io/r/fengmk2/restful-router)
+restful-router [![Build Status](https://travis-ci.org/expressjs/restful-router.svg?branch=master)](http://travis-ci.org/expressjs/restful-router) [![Coverage Status](https://coveralls.io/repos/fengmk2/restful-router/badge.png)](https://coveralls.io/r/fengmk2/restful-router)
 =======
 
 [![NPM](https://nodei.co/npm/restful-router.png?downloads=true&stars=true)](https://nodei.co/npm/restful-router/)
