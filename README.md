@@ -1,3 +1,10 @@
+> [!CAUTION]
+> **This repository is archived and no longer actively maintained.**
+>
+> We are no longer accepting issues, feature requests, or pull requests.
+> For additional support or questions, please visit the [Express.js Discussions page](https://github.com/expressjs/express/discussions).
+
+
 restful-router [![Build Status](https://travis-ci.org/expressjs/restful-router.svg?branch=master)](http://travis-ci.org/expressjs/restful-router) [![Coverage Status](https://coveralls.io/repos/fengmk2/restful-router/badge.png)](https://coveralls.io/r/fengmk2/restful-router)
 =======
 
